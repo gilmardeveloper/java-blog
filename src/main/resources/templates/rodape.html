@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<body>
+	<div th:fragment="rodape">
+
+		<footer class="footer footer-black footer-big">
+			<div class="container">
+
+				<div class="content">
+					<div class="row">
+
+						<div class="col-md-6">
+							<a href="https://blog.cnhmais.com.br"><h5>Blog</h5></a>
+							<p>Acompanhe para receber notícias relacionadas ao Blog.</p>
+						</div>
+
+						<div class="col-md-2">
+							<h5>Veja tabém</h5>
+							<ul class="links-vertical">
+								<li>
+									<a th:href="@{/diversos/}">
+										Assuntos diversos
+									</a>
+								</li>
+								<li>
+									<a th:href="@{/parceiros/}">
+										Sites de parceiros 
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-md-3 col-md-offset-1">
+							<h5>Receba Novidades</h5>
+
+							<form class="form form-newsletter" method="post" th:action="@{/escricao/assinante/}">
+
+								<div class="form-group">
+									<input type="email" class="form-control" name="email" placeholder="informe seu email" required="true" />
+								</div>
+
+								<button type="submit" class="btn btn-primary btn-just-icon" name="button">
+									<i class="material-icons">mail</i>
+								</button>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+
+				<hr />
+
+				<ul class="social-buttons">
+					<li>
+						<a href="#" class="btn btn-just-icon btn-simple btn-twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn-just-icon btn-simple btn-facebook">
+							<i class="fa fa-facebook-square"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn-just-icon btn-simple btn-google">
+							<i class="fa fa-google-plus"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn-just-icon btn-simple btn-youtube">
+							<i class="fa fa-youtube-play"></i>
+						</a>
+					</li>
+				</ul>
+
+				<details class="copyright pull-center">
+					<summary>Copyright &copy; <script>document.write(new Date().getFullYear())</script></summary> Blog todos os direitos reservados.
+				</details>
+			</div>
+		</footer>
+
+	</div>
+</body>
+</html>
